@@ -1,16 +1,16 @@
-// Define the Vehicle class (superclass)
+// Defines the Vehicle class (superclass)
 class Vehicle {
   String name;
   Vehicle(this.name);
   void drive() => print('Driving a $name');
 }
 
-// Define the ElectricVehicle interface
+// Defines the ElectricVehicle interface
 abstract class ElectricVehicle {
   void charge();
 }
 
-// Define the ElectricCar class (subclass)
+// Defines the ElectricCar class (subclass)
 class ElectricCar extends Vehicle implements ElectricVehicle {
   double chargeCapacity;
 
@@ -28,12 +28,12 @@ class ElectricCar extends Vehicle implements ElectricVehicle {
 }
 
 void main() {
-  // Create an instance of ElectricCar
+  // Creates an instance of ElectricCar
   final myElectricCar = ElectricCar('Tesla Model S', 85.0);
 
-  // Demonstrate method overriding
+  // Demonstrates method overriding
   myElectricCar.drive();
 
-  // Demonstrate charging progress
+  // Demonstrates charging progress
   myElectricCar.charge();
 }
